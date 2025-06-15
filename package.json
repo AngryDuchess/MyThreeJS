@@ -1,0 +1,19 @@
+{
+  "name": "mythreejs",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:0-moving_cubes": "PROJECT=0-moving_cubes vite",
+    "build": "vite build",
+    "build:0-moving_cubes": "PROJECT=0-moving_cubes vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "three": "^0.177.0"
+  }
+}
