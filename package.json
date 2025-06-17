@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "vite",
     "dev:0-moving_cubes": "PROJECT=0-moving_cubes vite",
+    "dev:1-cursor-movement": "PROJECT=1-cursor-movement vite",
     "build": "vite build",
     "build:0-moving_cubes": "PROJECT=0-moving_cubes vite build",
+    "build:1-cursor-movement": "PROJECT=1-cursor-movement vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
