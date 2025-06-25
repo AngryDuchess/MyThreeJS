@@ -8,10 +8,12 @@
     "dev:0-moving_cubes": "PROJECT=0-moving_cubes vite",
     "dev:1-cursor-movement": "PROJECT=1-cursor-movement vite",
     "dev:2-fullscreen_and_resizing": "PROJECT=2-fullscreen_and_resizing vite",
+    "dev:3-geometry": "PROJECT=3-geometry vite",
     "build": "vite build",
     "build:0-moving_cubes": "PROJECT=0-moving_cubes vite build",
     "build:1-cursor-movement": "PROJECT=1-cursor-movement vite build",
     "build:2-fullscreen_and_resizing": "PROJECT=2-fullscreen_and_resizing vite build",
+    "build:3-geometry": "PROJECT=3-geometry vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
