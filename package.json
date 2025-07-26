@@ -9,14 +9,17 @@
     "dev:1-cursor-movement": "PROJECT=1-cursor-movement vite",
     "dev:2-fullscreen_and_resizing": "PROJECT=2-fullscreen_and_resizing vite",
     "dev:3-geometry": "PROJECT=3-geometry vite",
+    "dev:4-debug_ui": "PROJECT=4-debug_ui vite",
     "build": "vite build",
     "build:0-moving_cubes": "PROJECT=0-moving_cubes vite build",
     "build:1-cursor-movement": "PROJECT=1-cursor-movement vite build",
     "build:2-fullscreen_and_resizing": "PROJECT=2-fullscreen_and_resizing vite build",
     "build:3-geometry": "PROJECT=3-geometry vite build",
+    "build:4-debug_ui": "PROJECT=4-debug_ui vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "lil-gui": "^0.20.0",
     "vite": "^6.3.5"
   },
   "dependencies": {

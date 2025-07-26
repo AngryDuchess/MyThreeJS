@@ -1,23 +1,20 @@
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import "./style.css";
 import * as THREE from "three";
+import GUI from "lil-gui";
+
+const gui = new GUI();
 
 const canvas = document.querySelector("canvas.webgl");
 const scene = new THREE.Scene();
 
-const sphere = new THREE.Mesh(
+const mesh = new THREE.Mesh(
   // new THREE.BoxGeometry(1, 1, 1),
   new THREE.SphereGeometry(1, 32, 32),
   new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true })
 );
-scene.add(sphere);
-
-const torus = new THREE.Mesh(
-  new THREE.TorusGeometry(1, 0.4, 16, 100),
-  new THREE.MeshBasicMaterial({ color: 0x00ff00, wireframe: true })
-);
-torus.position.x = -2.5;
-scene.add(torus);
+scene.add(mesh);
+gui.add(mesh.position, "x").min(-5).max(5).step(0.01).name("Position X");
 
 const cursor = { x: 0, y: 0 };
 
@@ -30,24 +27,6 @@ const sizes = {
   width: window.innerWidth,
   height: window.innerHeight,
 };
-
-window.addEventListener("resize",(e)=>{
-  sizes.width = window.innerWidth
-  sizes.height = window.innerHeight
-
-  camera.aspect = sizes.width/sizes.height
-  camera.updateProjectionMatrix()
-  renderer.setSize(sizes.width,sizes.height)
-})
-
-window.addEventListener("dblclick",(e)=>{
-  if (!document.fullscreenElement){
-    canvas.requestFullscreen()
-  } else {
-    document.exitFullscreen()
-  }
-})
-
 
 const camera = new THREE.PerspectiveCamera(
   75,
@@ -68,7 +47,7 @@ renderer.setSize(sizes.width, sizes.height);
 
 function animate() {
   requestAnimationFrame(animate);
-  controls.update()
+  controls.update();
   renderer.render(scene, camera);
 }
 animate();
